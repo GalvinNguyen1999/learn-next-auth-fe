@@ -13,7 +13,7 @@ export const authOptions: NextAuthOptions = {
     async signIn({ user }: { user: any }) {
       console.log("signIn", user);
 
-      await fetch("http://localhost:4000/user/register", {
+      await fetch("https://learn-nest-auth-be.onrender.com/user/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
