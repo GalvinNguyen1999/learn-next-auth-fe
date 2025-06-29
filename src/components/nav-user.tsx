@@ -102,7 +102,7 @@ export function NavUser({
             <DropdownMenuItem
               onClick={() =>
                 signOut({
-                  callbackUrl: "/vi/login",
+                  callbackUrl: "/vi/sign-in",
                 })
               }
             >

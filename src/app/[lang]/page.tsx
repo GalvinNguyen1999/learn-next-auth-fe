@@ -8,6 +8,6 @@ export default async function Page() {
   if (session) {
     redirect("/vi/dashboard");
   } else {
-    redirect("/vi/login");
+    redirect("/vi/sign-in");
   }
 }
