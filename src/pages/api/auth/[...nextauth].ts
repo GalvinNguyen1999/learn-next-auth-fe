@@ -13,7 +13,7 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET as string,
     }),
   ],
-  secret: process.env.NEXTAUTH_SECRET as string
+  secret: process.env.NEXTAUTH_SECRET as string,
 };
 
 export default NextAuth(authOptions);
