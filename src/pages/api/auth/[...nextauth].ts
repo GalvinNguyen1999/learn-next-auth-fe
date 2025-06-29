@@ -9,23 +9,6 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET as string,
-  callbacks: {
-    async signIn({ user }: { user: any }) {
-      console.log("signIn", user);
-
-      await fetch("https://learn-nest-auth-be.onrender.com/user/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: user.email,
-          name: user.name,
-          avatar: user.image,
-        }),
-      });
-
-      return true;
-    },
-  },
 };
 
 export default NextAuth(authOptions);
